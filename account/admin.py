@@ -1,3 +1,7 @@
 from django.contrib import admin
+from account.models import Data
 
-# Register your models here.
+
+class Auth(admin.ModelAdmin):
+    list_display = ['id', 'name', 'text']
+admin.site.register(Data, Auth)

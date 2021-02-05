@@ -74,3 +74,4 @@ fabric.properties
 db.sqlite3
 venv
 .env
+study.txt
