@@ -5,11 +5,12 @@
     <title>Title</title>
 </head>
 <body>
-    {% csrf_token $}
     {% if lst %}
-        {% for x in lst %}
-            {{ x.name }}<br>
-            {{ x.text }}
+        {% for x in lst.photo_set.all %}
+            {{ x.data.id }}
+            {{ x.data.uid }}
+            {{ x.data.passwd }}
+            <img src="{{ x.image.url }}"><br>
         {% endfor %}
     {% endif %}
 </body>
