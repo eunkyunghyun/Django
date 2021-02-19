@@ -21,4 +21,5 @@ from webProject import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('account/', include("account.urls")),
+    path('accountapp/', include("accountapp.urls")),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

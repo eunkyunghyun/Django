@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block contents %}
+<div style="text-align: center">
+    <div>
+        <h1>로그인</h1>
+    </div>
+    <div>
+        <form action="{% url 'accountapp:login' %}" method="post">
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit" value="Confirm" class="btn btn-primary">
+        </form>
+    </div>
+</div>
+{% endblock %}
