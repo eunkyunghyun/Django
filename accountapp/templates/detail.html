@@ -14,10 +14,10 @@
         </p>
         <p>
             {% if target_user == user %}
-                <a href="{% url 'accountapp:update' pk=user.pk %}">
+                <a href="{% url 'accountapp:update' pk=target_user.pk %}">
                     회원수정
                 </a>
-                <a href="{% url 'accountapp:delete' pk=user.pk %}">
+                <a href="{% url 'accountapp:delete' pk=target_user.pk %}">
                     회원탈퇴
                 </a>
             {% endif %}
